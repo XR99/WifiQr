@@ -17,4 +17,6 @@ qr.add_data(string)
 qr.make(fit=True)
 img = qr.make_image(fill_color="black", back_color="white")
 
-img.save("qr.png")
+img.save("C:/Users/kklva/Desktop/wifi_qr.png")
+im = Image.open(r"C:/Users/kklva/Desktop/wifi_qr.png")
+im.show()
