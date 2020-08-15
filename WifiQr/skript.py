@@ -1,5 +1,6 @@
 import qrcode
-from PIL import Image 
+from PIL import Image
+import getpass
 
 name = input("Enter name of Wifi: ")
 security = input("Enter Security: ")
@@ -17,6 +18,9 @@ qr.add_data(string)
 qr.make(fit=True)
 img = qr.make_image(fill_color="black", back_color="white")
 
-img.save("C:/Users/kklva/Desktop/wifi_qr.png")
-im = Image.open(r"C:/Users/kklva/Desktop/wifi_qr.png")
+
+user = getpass.getuser()
+save = "C:/Users/"+user+"/Desktop/wifi_qr.png"
+img.save(save)
+im = Image.open(r""+save)
 im.show()
