@@ -2,10 +2,10 @@ import qrcode
 from PIL import Image
 import getpass
 
-name = input("Enter name of Wifi: ")
+SSID = input("Enter SSID: ")
 security = input("Enter Security: ")
 pw = input("Enter password: ")
-string = "WIFI:T:"+security+";S:"+name+";P:"+pw+";;"
+string = "WIFI:T:{};S:{};P:{};;".format(security, SSID, pw)
 
 
 qr = qrcode.QRCode(
