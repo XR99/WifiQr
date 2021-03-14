@@ -4,8 +4,9 @@ import getpass
 
 SSID = input("Enter SSID: ")
 security = input("Enter Security: ")
+hidden = input("SSID hidden true or false?:")
 pw = input("Enter password: ")
-string = "WIFI:T:{};S:{};P:{};;".format(security, SSID, pw)
+string = "WIFI:T:{};S:{};H:{};P:{};;".format(security, SSID, hidden, pw)
 
 
 qr = qrcode.QRCode(
