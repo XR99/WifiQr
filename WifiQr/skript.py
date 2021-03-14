@@ -20,7 +20,8 @@ img = qr.make_image(fill_color="black", back_color="white")
 
 
 user = getpass.getuser()
-save = "C:/Users/"+user+"/Desktop/wifi_qr.png"
+name = input("name qr code: ")
+save = "C:/Users/{}/Desktop/{}.png".format(user, name)
 img.save(save)
 im = Image.open(r""+save)
 im.show()
