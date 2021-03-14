@@ -18,13 +18,13 @@ def main():
         string = getInput()
         img = createQR(string)
         save(img)
-    elif sys.argv[0] == "-h" or sys.argv[0] == "--help":
+    elif sys.argv[1] == "-h" or sys.argv[1] == "--help":
         print("help")
-    elif len(sys.argv) == 4:
-        SSID = sys.argv[0]
-        security = sys.argv[1]
-        hidden = sys.argv[2]
-        pw = sys.argv[3]
+    elif len(sys.argv) == 5:
+        SSID = sys.argv[1]
+        security = sys.argv[2]
+        hidden = sys.argv[3]
+        pw = sys.argv[4]
         string = "WIFI:T:{};S:{};H:{};P:{};;".format(security, SSID, hidden, pw)
         img = createQR(string)
         save(img)
