@@ -29,9 +29,9 @@ def main():
         img = createQR(string)
         save(img)
     else:
-        print("ERROR")
+        print("No valid parameter")
+        print("Use -h or --help for help")
         sys.exit()
-
 ########################################################################################
 def getInput():
     """
